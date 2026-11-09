@@ -1,5 +1,3 @@
-import React from "react";
-
 const PurchsesText = () => {
   return (
     <p className="text-[#f5e4c7] text-[5rem] leading-[7rem]">
@@ -10,7 +8,7 @@ const PurchsesText = () => {
       >
         40000
       </span>
-      تومان صرفه‌جویی کنید
+      تومان  تخفیف بگیرید
     </p>
   );
 };

@@ -1,19 +1,5 @@
 import { motion } from "motion/react";
-// <ButtonAnimation
-//   key={2}
-//   bgHover="#f5e4c7"
-//   positionText="y"
-//   wEl="true"
-//   borderColor="#f5e4c7"
-//   icon={
-//     <motion.span
-//       variants={variIcon}
-//       className="w-full h-full flex justify-center items-center "
-//     >
-//       <FaInstagram className="w-12 h-12 max-lg:w-16 max-lg:h-16" />
-//     </motion.span>
-//   }
-// />
+
 const buttonVariants = {
   initial: ({ bg }) => ({
     backgroundColor: bg,

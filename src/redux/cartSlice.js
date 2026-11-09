@@ -1,6 +1,9 @@
-import { createSlice ,current} from "@reduxjs/toolkit";
 
-const initialState = { items: [] };
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+  items: [],
+};
 
 const cartSlice = createSlice({
   name: "cart",
@@ -11,37 +14,51 @@ const cartSlice = createSlice({
       const product = action.payload;
 
       const existingProduct = state.items.find(
-        (item) => item.id === product.id,
+        (item) => item.id === product.id
       );
 
       if (existingProduct) {
-        existingProduct.quantity += product.quantity;
+        existingProduct.quantity += product.quantity || 1;
       } else {
-        state.items.push(product);
+        state.items.push({
+          ...product,
+          quantity: product.quantity || 1,
+        });
       }
-      console.log(state, action, initialState);
-      console.log("items:", current(state.items));
-      console.log("payload:", action.payload);
     },
+
     removeFromCart: (state, action) => {
-      state.items = state.items.filter((item) => item.id !== action.payload);
+      state.items = state.items.filter(
+        (item) => item.id !== action.payload
+      );
     },
+
     increaseQuantity: (state, action) => {
-      const product = state.items.find((item) => item.id === action.payload);
+      const product = state.items.find(
+        (item) => item.id === action.payload
+      );
 
       if (product) {
         product.quantity += 1;
       }
     },
-    decreaseQuantity: (state, action) => {
-      const product = state.items.find((item) => item.id === action.payload);
 
-      if (product && product.quantity > 1) {
-        product.quantity -= 1;
-      } else {
-        state.items = state.items.filter((item) => item.id !== action.payload);
+    decreaseQuantity: (state, action) => {
+      const product = state.items.find(
+        (item) => item.id === action.payload
+      );
+
+      if (product) {
+        if (product.quantity > 1) {
+          product.quantity -= 1;
+        } else {
+          state.items = state.items.filter(
+            (item) => item.id !== action.payload
+          );
+        }
       }
     },
+
     clearCart: (state) => {
       state.items = [];
     },

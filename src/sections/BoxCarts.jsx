@@ -100,7 +100,7 @@ const BoxCarts = () => {
   }, []);
 
   return (
-    <section className="h-[2750px] relative w-full">
+    <section className="h-[2750px] max-sm:h-[2600px] relative w-full">
       <div className="carts absolute w-full min-h-dvh flex items-center justify-center">
         {dataCarts.map((cart, id) => (
           <ItemCart key={id} num={id} cart={cart} />

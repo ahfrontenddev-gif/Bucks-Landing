@@ -17,7 +17,7 @@ const Product = () => {
   return (
     <>
       <main className="w-full flex p-8 gap-8 max-lg:flex-col">
-        <motion.div1
+        <motion.div
           initial={{ x: 500 }}
           animate={{ x: 0 }}
           transition={{ delay: 0.1, ease: "backOut", duration: 0.3 }}
@@ -28,10 +28,11 @@ const Product = () => {
             src={info.bgImage}
             alt=""
           />
-        </motion.div1>
+        </motion.div>
         <ProductInfo info={info} />
       </main>
       <Store />
+      <div className="max-sm:h-[150px]"></div>
     </>
   );
 };

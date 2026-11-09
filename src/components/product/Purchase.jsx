@@ -9,7 +9,7 @@ import slides from "../../data/product";
 const Purchase = () => {
   const { productId } = useParams();
   const product = slides[productId - 1];
-  const { price, id } = product;
+  const { price, bg } = product;
   const dispatch = useDispatch();
   const [num, setNum] = useState(1);
   return (
@@ -66,13 +66,13 @@ const Purchase = () => {
         <ButtonAnimation
           onFun={() => dispatch(addToCart({ ...product, quantity: num }))}
           key={2}
-          bg="#DA1F27"
+          bg={bg}
           bgHover="#100b06"
           positionText="y"
           wEl="true"
-          borderColor="#DA1F27"
+          borderColor={bg}
           text={
-            <motion.span className="w-full h-full flex justify-between items-center pl-[2rem] pr-[2rem] text-[#f5e4c7]">
+            <motion.span className="w-full h-full flex justify-between items-center max-sm:py-[1rem] pl-[2rem] pr-[2rem] text-[#f5e4c7]">
               <h6 className="text-[1.8rem]">اضافه به سبد خرید</h6>
               <span className="text-[1.8rem]"> {price}</span>
             </motion.span>

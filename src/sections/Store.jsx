@@ -29,7 +29,7 @@ const Store = () => {
   }, []);
 
   return (
-    <div className="stores-box w-full min-h-[100vh] max-lg:min-h-[250vh]">
+    <div className="stores-box w-full min-h-[100vh] max-lg:min-h-[250vh] max-sm:min-h-[230vh]">
       <div className="absolute w-full h-full flex gap-4 pl-4 pr-4 max-lg:flex-wrap">
         {slides.map((cart, id) => {
           return <StoreCart key={id} num={id} cart={cart} />;

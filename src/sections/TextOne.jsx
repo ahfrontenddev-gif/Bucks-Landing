@@ -5,7 +5,7 @@ const TextOne = () => {
   const textSplit = text.split(" ");
 
   return (
-    <div className="text w-full font-[lalezar1] font-lightb pt-[20rem] pb-[20rem] max-sm:pb-[0rem] max-sm:pt-[10rem]">
+    <div className="text w-full font-[lalezar1] font-lightb pt-[20rem] pb-[20rem] max-sm:pb-[0rem] max-sm:pt-[0rem]">
       <motion.h6
         viewport={{ once: true }}
         initial="hidden"

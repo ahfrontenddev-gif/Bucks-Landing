@@ -27,7 +27,7 @@ const TextTwo = () => {
               },
             },
           }}
-          className="text-[20rem] font-[lalezar1] max-sm:text-[8rem]"
+          className="text-[20rem] font-[lalezar1] max-sm:text-[5rem] max-sm:inline"
         >
           محصول
         </motion.h4>
@@ -35,7 +35,7 @@ const TextTwo = () => {
         {textSplit.map((word, index) => (
           <motion.span
             key={index}
-            className="inline-block mr-4 max-md:text-[2.7rem]"
+            className="inline-block mr-4 max-md:text-[2.7rem] max-sm:text-[5rem]"
             variants={{
               hidden: {
                 y: 100,

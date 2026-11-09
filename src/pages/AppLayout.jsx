@@ -1,10 +1,8 @@
-import Nav from "../sections/Nav";
 import Header from "../sections/Header";
 import ShowProduct from "../sections/ShowProduct";
 import TextOne from "../sections/TextOne";
 import TextTwo from "../sections/TextTwo";
 import BoxCarts from "../sections/BoxCarts";
-import Footer from "../sections/Footer";
 import Store from "../sections/Store";
 import Purchase from "../sections/Purchase";
 

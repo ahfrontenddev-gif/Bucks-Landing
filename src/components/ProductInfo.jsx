@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import ProductPurchases from "./product/Purchase";
 import Description from "./product/Description";
 import ParTextSplit from "./product/ParTextSplit";

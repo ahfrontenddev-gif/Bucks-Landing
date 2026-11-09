@@ -1,20 +1,18 @@
 import { IoMdClose } from "react-icons/io";
 import { AnimatePresence, motion } from "motion/react";
 import EmptyBasket from "./EmptyBasket";
-import { useState } from "react";
 import ButtonAnimation from "./ButtonAnimation";
-import { TbHttpDelete } from "react-icons/tb";
 import ListProductCart from "./ListProductCart";
+import { useSelector } from "react-redux";
 const ShowCart = ({ setShowCart }) => {
-  const [c, setC] = useState();
-
+  const items = useSelector((state) => state.cart.items);
   return (
     <motion.div
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       exit={{ scale: 0 }}
       transition={{ duration: 0.5, ease: "backOut" }}
-      className="overflow- fixed top-[1vh] right-[.5vw] w-[44vw] min-h-[80vh] bg-[#f5e4c7] rounded-xl z-50 origin-top-right"
+      className="fixed top-[1vh] right-[.5vw] w-[44vw] max-sm:right-[2vw] max-sm:w-[96vw] min-h-[80vh] bg-[#f5e4c7] rounded-xl z-50 origin-top-right"
     >
       <div
         onClick={() => setShowCart(false)}
@@ -33,14 +31,14 @@ const ShowCart = ({ setShowCart }) => {
       </div>
       <ListProductCart />
       <AnimatePresence mode="wait">
-        {c && (
+        {!items && (
           <motion.div
             initial={{ opacity: 0, scale: 0.2, y: 200 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.2, y: -200 }}
             transition={{ duration: 0.2 }}
           >
-            <EmptyBasket />
+            <EmptyBasket setShowCart={setShowCart}/>
           </motion.div>
         )}
       </AnimatePresence>

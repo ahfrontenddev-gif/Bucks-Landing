@@ -1,4 +1,3 @@
-import React from 'react'
 import PurchsesText from './PurchsesText'
 import PurchsesItems from './PurchsesItems'
 

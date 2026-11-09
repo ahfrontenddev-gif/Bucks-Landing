@@ -1,7 +1,7 @@
 import Menu from "../components/Menu";
 import Cart from "../components/Cart";
 import ButtonAnimation from "../components/ButtonAnimation";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 const Nav = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Nav = () => {
         <Cart />
         <div className="h-24 w-[18rem] max-lg:flex-1 max-sm:h-20">
           <ButtonAnimation
-            onFun={() => navigate("/product/2")}
+            onFun={() => navigate("/product/1")}
             bg="#f5e4c7"
             padding="false"
             borderColor="#f5e4c7"
@@ -26,9 +26,9 @@ const Nav = () => {
           />
         </div>
       </div>
-      <div className="">
+      <Link to='/' className="">
         <img src="/image/logo.png" className="h-28 max-sm:scale-110 max-sm:h-20 aspect-square" alt="" />
-      </div>
+      </Link>
     </motion.nav>
   );
 };

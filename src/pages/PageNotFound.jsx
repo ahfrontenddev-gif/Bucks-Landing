@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonAnimation from "../components/ButtonAnimation";
 import Images from "../components/Images";
