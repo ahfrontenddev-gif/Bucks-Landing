@@ -14,25 +14,25 @@
 
 صفحه اصلی با کارت‌های رنگی محصولات، تصاویر بزرگ و چیدمان بصری متمایز طراحی شده است.
 
-![نمای کلی محصولات](./public/screenshots/products-overview.png)
+![نمای کلی محصولات](./screenshots/products-overview.png)
 
 ### بخش معرفی ویژگی‌های محصول
 
 در این بخش، ویژگی‌ها و مزایای محصول با استفاده از کارت‌های محتوایی و تصاویر تزئینی نمایش داده می‌شوند.
 
-![بخش ویژگی‌ها و ترکیبات](./public/screenshots/ingredients-section.png)
+![بخش ویژگی‌ها و ترکیبات](./screenshots/ingredients-section.png)
 
 ### اسلایدر تعاملی محصولات
 
 محصولات در یک اسلایدر تعاملی نمایش داده می‌شوند و کاربر می‌تواند بین آن‌ها جابه‌جا شود.
 
-![اسلایدر محصولات](./public/screenshots/home-carousel.png)
+![اسلایدر محصولات](./screenshots/home-carousel.png)
 
 ### صفحه اختصاصی محصول
 
 برای هر محصول یک صفحه جداگانه در نظر گرفته شده که تصویر، توضیحات، ویژگی‌ها، قیمت و کنترل تعداد محصول را نمایش می‌دهد.
 
-![صفحه جزئیات محصول](./public/screenshots/product-detail.png)
+![صفحه جزئیات محصول](./screenshots/product-detail.png)
 
 ---
 
@@ -104,30 +104,11 @@
 
 ## اجرای پروژه
 
-ابتدا وابستگی‌های پروژه را نصب کنید:
-
 ```bash
 npm install
 ```
-
-سپس سرور توسعه را اجرا کنید:
-
 ```bash
 npm run dev
 ```
 
 ---
-
-## ساختار تصاویر README
-
-تصاویر پیش‌نمایش در پوشه `screenshots` قرار گرفته‌اند. برای نمایش صحیح تصاویر در GitHub، فایل README و پوشه screenshots را با همین ساختار در ریشه پروژه قرار دهید:
-
-```text
-Bucks-Landing/
-├── screenshots/
-│   ├── products-overview.png
-│   ├── ingredients-section.png
-│   ├── home-carousel.png
-│   └── product-detail.png
-└── README.md
-```
